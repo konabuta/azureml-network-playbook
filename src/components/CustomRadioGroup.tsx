@@ -1,15 +1,15 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { SurveyQuestionRadiogroup } from 'survey-react';
+import { SurveyQuestionRadiogroup } from 'survey-react-ui';
 import * as React from 'react';
 import contentData from '../data/content.json';
 import RadioDefinition from './RadioDefinition';
 import HelpButton from './HelpButton';
 
 export class CustomRadiogroup extends SurveyQuestionRadiogroup {
-  protected getItems(cssClasses: any): Array<any> {
-    const items = super.getItems(cssClasses);
+  protected getItems(cssClasses: any, choices: any): Array<any> {
+    const items = super.getItems(cssClasses, choices);
 
     const contentQuestion: any = contentData.questions.find(q => q.name === this.question.name);
 

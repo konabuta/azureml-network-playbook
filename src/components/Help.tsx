@@ -14,7 +14,7 @@ import {
   IIconProps,
 } from '@fluentui/react';
 import { surveyModel } from '../App'
-import { ConditionRunner } from 'survey-react'
+import { ConditionRunner } from 'survey-core'
 
 interface HelpProps {
   name: string,

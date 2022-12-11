@@ -6,7 +6,8 @@
 // which page to show based on the status of the survey.
 
 import React, { useEffect, useState } from 'react';
-import { ReactSurveyModel, Survey } from 'survey-react';
+import { Model } from 'survey-core';
+import { Survey } from 'survey-react-ui';
 import Intro from './components/Intro';
 import TaskList from './components/TaskList';
 import CategoryTags from './components/CategoryTags';
@@ -26,7 +27,7 @@ interface AppProps {
 
 // Captures the survey model object after the page renders
 // Exposes some encapsulated state needed for undo functionality
-export let surveyModel: ReactSurveyModel;
+export let surveyModel: Model;
 
 // SurveyJS will re-render its component when pages are changed or when the
 // app switches from mobile to desktop view. Some things need to only happen
@@ -130,6 +131,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
       console.error("State string length != number of questions");
       return;
     }
+    console.log("questions:",)
 
     const valueMap = new Map<string, string>();
     let numQuestions = 0;
@@ -210,7 +212,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
     return serialized;
   }
 
-  const handleAfterRender = (sender: ReactSurveyModel, options: any) => {
+  const handleAfterRender = (sender: Model, options: any) => {
     console.log("AfterRender", sender, options);
     surveyModel = sender;
     const urlParams = new URLSearchParams(window.location.search);
@@ -221,7 +223,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
     isFirstRender = false;
   }
 
-  const handleValueChanged = (sender: ReactSurveyModel, options: SurveyValueChangedOptions) => {
+  const handleValueChanged = (sender: Model, options: SurveyValueChangedOptions) => {
     if (isDeserializing) {
       return;
     }
@@ -385,13 +387,15 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
       );
     }
   }
-
+  console.log("contentData:", contentData)
   const taskMap = createTaskMap(contentData);
+  console.log("taskMap:", taskMap)
   const instructionHeader = contentData.surveyInstructions?.title;
   const instructionsMsg = contentData.surveyInstructions?.message;
   const scenarioHeader = contentData.taskInstructions?.title;
   const scenarioMsg = contentData.taskInstructions?.message;
   const categories = Array.from(taskMap.keys());
+  console.log("category:", categories)
   const highContrastBorder = isHighContrast ? "solid white 1px" : "";
   const numTasks = categories.length === 0 ? 0 :
     categories.map(category => TaskCard.filterTasks(taskMap.get(category) ?? []))

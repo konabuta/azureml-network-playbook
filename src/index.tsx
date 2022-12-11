@@ -10,7 +10,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import surveyData from './data/survey.json';
 import contentData from './data/content.json';
-import { ReactQuestionFactory } from 'survey-react';
+import { ReactQuestionFactory } from 'survey-react-ui';
 import { CustomRadiogroup } from './components/CustomRadioGroup';
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 
