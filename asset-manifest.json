@@ -1,25 +1,15 @@
 {
   "files": {
-    "main.css": "/azureml-network-playbook/static/css/main.db505fcd.chunk.css",
-    "main.js": "/azureml-network-playbook/static/js/main.763eb9f1.chunk.js",
-    "main.js.map": "/azureml-network-playbook/static/js/main.763eb9f1.chunk.js.map",
-    "runtime-main.js": "/azureml-network-playbook/static/js/runtime-main.9b1df991.js",
-    "runtime-main.js.map": "/azureml-network-playbook/static/js/runtime-main.9b1df991.js.map",
-    "static/css/2.3fde6769.chunk.css": "/azureml-network-playbook/static/css/2.3fde6769.chunk.css",
-    "static/js/2.e0fa2bb6.chunk.js": "/azureml-network-playbook/static/js/2.e0fa2bb6.chunk.js",
-    "static/js/2.e0fa2bb6.chunk.js.map": "/azureml-network-playbook/static/js/2.e0fa2bb6.chunk.js.map",
-    "static/js/3.e1515615.chunk.js": "/azureml-network-playbook/static/js/3.e1515615.chunk.js",
-    "static/js/3.e1515615.chunk.js.map": "/azureml-network-playbook/static/js/3.e1515615.chunk.js.map",
+    "main.css": "/azureml-network-playbook/static/css/main.d0eacd83.css",
+    "main.js": "/azureml-network-playbook/static/js/main.8f62573b.js",
+    "static/js/496.0eb64990.chunk.js": "/azureml-network-playbook/static/js/496.0eb64990.chunk.js",
     "index.html": "/azureml-network-playbook/index.html",
-    "static/css/2.3fde6769.chunk.css.map": "/azureml-network-playbook/static/css/2.3fde6769.chunk.css.map",
-    "static/css/main.db505fcd.chunk.css.map": "/azureml-network-playbook/static/css/main.db505fcd.chunk.css.map",
-    "static/js/2.e0fa2bb6.chunk.js.LICENSE.txt": "/azureml-network-playbook/static/js/2.e0fa2bb6.chunk.js.LICENSE.txt"
+    "main.d0eacd83.css.map": "/azureml-network-playbook/static/css/main.d0eacd83.css.map",
+    "main.8f62573b.js.map": "/azureml-network-playbook/static/js/main.8f62573b.js.map",
+    "496.0eb64990.chunk.js.map": "/azureml-network-playbook/static/js/496.0eb64990.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.9b1df991.js",
-    "static/css/2.3fde6769.chunk.css",
-    "static/js/2.e0fa2bb6.chunk.js",
-    "static/css/main.db505fcd.chunk.css",
-    "static/js/main.763eb9f1.chunk.js"
+    "static/css/main.d0eacd83.css",
+    "static/js/main.8f62573b.js"
   ]
 }
