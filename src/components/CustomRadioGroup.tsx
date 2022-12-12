@@ -22,7 +22,7 @@ export class CustomRadiogroup extends SurveyQuestionRadiogroup {
             <RadioDefinition key={contentChoice.name + "__customradiogroup"}
                             definition={contentChoice.definition}  />
           </>
-        ) : null
+        ) : <br />
       )
     });
 
