@@ -9,6 +9,102 @@
   },
   "questions": [
     {
+      "name": "workspaceNetwork",
+      "category": "Correct operation",
+      "choices": [
+        {
+          "name": "search",
+          "definition": "A search system locates items that correspond to user-specified keywords, phrases, or characters.",
+          "examples": [
+            {
+              "name": "",
+              "details": "<ul> <li>Search engines, such as Bing, generate matching results (e.g., a movie title) along with contextually relevant information (e.g., showtimes) based on the user's current location and time. </li> <li>An in-app search feature, such as Microsoft Search in Office products, allows users to quickly find application-specific information, from commands or help to recently used files and more.</li> </ul>"
+            }
+          ],
+          "taskCard": {
+            "tasks": [
+              {
+                "name": "Normal operation",
+                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
+              }
+            ]
+          }
+        },
+        {
+          "name": "recommendation",
+          "definition": "A recommendation system makes preferred-content suggestions, sometimes by predicting the user’s rating of the content.",
+          "examples": [
+            {
+              "name": "",
+              "details": "<ul> <li>Playlist generators for video and music services like Netflix, YouTube, and Spotify.</li> <li>Product recommender services, such as Amazon.</li> <li>Contextual assistant services such as, <a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Meeting Insights by Microsoft Outlook is an intelligent assistant that suggests meeting related information, including content presented during the meeting, sent meeting notes, and other relevant post-meeting material.\">Meeting Insights</a></li> </ul>"
+            }
+          ],
+          "taskCard": {
+            "tasks": [
+              {
+                "name": "Normal operation",
+                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
+              }
+            ]
+          }
+        },
+        {
+          "name": "conversational_ai",
+          "definition": "Conversational agents interact with people through one or more exchanges of natural-language dialogue, similar to conversing with a person.",
+          "examples": [
+            {
+              "name": "",
+              "details": "<ul> <li>Voice assistants for productivity management or home automation, like Cortana, Siri, and Alexa. </li> <li>Chatbots for customer support on e-commerce websites.</li> </ul>"
+            }
+          ],
+          "taskCard": {
+            "tasks": [
+              {
+                "name": "Normal operation",
+                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_prediction_and_assistance",
+          "definition": "Text prediction and writing assistants help with the writing process, including research, grammar, tone, and localization.",
+          "examples": [
+            {
+              "name": "",
+              "details": "<ul> <li>Predicting the next set of words based on the user's input.</li> <li>Providing corrections for spelling, grammar, and punctuation mistakes.</li> <li>Making suggestions for similar words, paraphrases, and alternative expressions.</li> </ul>"
+            }
+          ],
+          "taskCard": {
+            "tasks": [
+              {
+                "name": "Normal operation",
+                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
+              }
+            ]
+          }
+        },
+        {
+          "name": "classification",
+          "definition": "Text or document classification categorizes text in groups organized by predefined labels.",
+          "examples": [
+            {
+              "name": "",
+              "details": "<ul> <li>Spam filters in email applications, such as Microsoft Outlook.</li> </ul>"
+            }
+          ],
+          "taskCard": {
+            "tasks": [
+              {
+                "name": "Normal operation",
+                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.<p>"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "systemDomain",
       "category": "Correct operation",
       "choices": [
