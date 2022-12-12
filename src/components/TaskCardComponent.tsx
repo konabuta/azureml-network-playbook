@@ -19,6 +19,10 @@ interface TaskCardProps {
   isHighContrast: boolean
 }
 
+function intentMapping(name: String){
+    type intent = "success" | "warning" | "error" | "info"
+    return name=="info" ? "info" : undefined
+}
 const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHighContrast }) => {
   const hasMessage = card.message != null && card.message.length > 0;
   return (
@@ -34,7 +38,7 @@ const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHig
       { card.tasks.length !== 0 ? 
         <>
           {card.tasks.map(task => (
-            <Alert intent="warning" as="div">{task.details}</Alert>
+            <Alert intent={intentMapping(task.name)} as="div">{task.details}</Alert>
           ))}
         </> : null 
       }
