@@ -58,7 +58,7 @@
           "type": "radiogroup",
           "name": "delimiter",
           "title": "When activated, will your {workspaceNetwork} system have a clear way of delimiting the user's input?",
-          "visibleIf": "{privateACR} notempty",
+          "visibleIf": "{privateACR} ='xxx'",
           "choices": [
             {
               "value": "yes",
