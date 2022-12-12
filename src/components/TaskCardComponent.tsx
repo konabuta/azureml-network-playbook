@@ -12,7 +12,7 @@
 import React from 'react'
 import { TaskCard } from '../models/Types';
 import TaskComponent from './TaskComponent';
-import { Alert } from '@fluentui/react-alert';
+import { Alert } from "@fluentui/react-components/unstable";
 
 interface TaskCardProps {
   card: TaskCard,
@@ -34,7 +34,7 @@ const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHig
       { card.tasks.length !== 0 ? 
         <>
           {card.tasks.map(task => (
-            <Alert intent="info">{task.details}</Alert>
+            <Alert intent="warning" as="div">{task.details}</Alert>
           ))}
         </> : null 
       }
