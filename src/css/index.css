@@ -211,7 +211,7 @@ a:hover, a:visited, a:active {
   margin-left: auto;
 }
 
-.category-tag > .circle-text-small {
+.category-tag>.circle-text-small {
   margin-left: 0.75em;
 }
 
@@ -232,7 +232,7 @@ a:hover, a:visited, a:active {
 .scenario-bar-text {
   margin-left: 0.5em;
   margin-bottom: 0px;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .light-text {
@@ -288,11 +288,25 @@ a:hover, a:visited, a:active {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  20% { transform: scale(1.15); }
-  50% { transform: scale(.90); }
-  80% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.15);
+  }
+
+  50% {
+    transform: scale(.90);
+  }
+
+  80% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /****************************/
@@ -315,11 +329,11 @@ a:hover, a:visited, a:active {
   color: white !important;
 }
 
-.sv_main .sv_p_root > .sv_row:nth-child(odd) {
-  background-color:#01395E !important;
+.sv_main .sv_p_root>.sv_row:nth-child(odd) {
+  background-color: #01395E !important;
 }
 
-.sv_main .sv_p_root > .sv_row:nth-child(even) {
+.sv_main .sv_p_root>.sv_row:nth-child(even) {
   background-color: #01395E !important;
 }
 
@@ -349,19 +363,24 @@ a:hover, a:visited, a:active {
   html {
     font-size: 75%;
   }
+
   .title-bar {
     font-size: 1.5rem;
   }
+
   .column-header {
     font-size: 1.5rem;
   }
+
   .sv_main {
     width: 100% !important;
   }
+
   .sv_row {
     min-width: 100% !important;
     max-width: 100% !important;
   }
+
   div[id*="sq_"] {
     min-width: 100% !important;
     max-width: 100% !important;
@@ -416,7 +435,7 @@ a:hover, a:visited, a:active {
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .right-column {
     font-size: 14px;
     display: block;
@@ -491,7 +510,7 @@ a:hover, a:visited, a:active {
     margin-right: 15px;
     font-size: 12px;
   }
-  
+
   .scenario-bar {
     font-size: 14px;
   }
@@ -534,7 +553,7 @@ a:hover, a:visited, a:active {
     line-height: 24px !important;
   }
 
-  .sv_main .sv_p_root > .sv_row {
+  .sv_main .sv_p_root>.sv_row {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
   }
 }
