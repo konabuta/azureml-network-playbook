@@ -134,6 +134,7 @@ a:hover, a:visited, a:active {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 1rem;
   background-color: #001B2E;
   width: 100%;
 }
