@@ -24,7 +24,7 @@
           "taskCard": {
             "tasks": [
               {
-                "name": "Recommendation",
+                "name": "info",
                 "details": "Using Private Link-enabled workspace is recommended for enterprise deployment."
               }
             ]

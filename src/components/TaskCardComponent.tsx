@@ -12,6 +12,7 @@
 import React from 'react'
 import { TaskCard } from '../models/Types';
 import TaskComponent from './TaskComponent';
+import { Alert } from '@fluentui/react-alert';
 
 interface TaskCardProps {
   card: TaskCard,
@@ -28,7 +29,15 @@ const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHig
           {card.tasks.map(task => (
             <TaskComponent task={task} isHighContrast={isHighContrast}/>
           ))}
-        </> : null }
+        </> : null 
+      }
+      { card.tasks.length !== 0 ? 
+        <>
+          {card.tasks.map(task => (
+            <Alert intent="info">{task.details}</Alert>
+          ))}
+        </> : null 
+      }
     </div>
   )
 }
