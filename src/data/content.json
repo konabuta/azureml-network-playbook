@@ -42,7 +42,7 @@
           "taskCard": {
             "tasks": [
               {
-                "name": "Alert",
+                "name": "danger",
                 "details": "xxx"
               }
             ]
@@ -267,7 +267,7 @@
                 "details": "Congirue Private Link-enabled Azure Container Registry."
               },
               {
-                "name": "Alert",
+                "name": "warning",
                 "details": "<li>Service Endpoint is not officially supported and not recoomended.</li><li>Only Premium tier is supported for private link with private endpoint.</li>"
               }
             ]
