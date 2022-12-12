@@ -159,7 +159,7 @@ a:hover, a:visited, a:active {
 .column-header {
   display: flex;
   flex-direction: row;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
   line-height: normal;
 }
