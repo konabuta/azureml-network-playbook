@@ -12,7 +12,8 @@
 import React from 'react'
 import { TaskCard } from '../models/Types';
 import TaskComponent from './TaskComponent';
-import { Alert } from "@fluentui/react-components/unstable";
+// import { Alert } from "@fluentui/react-components/unstable";
+import Alert from 'react-bootstrap/Alert';
 
 interface TaskCardProps {
   card: TaskCard,
@@ -20,9 +21,14 @@ interface TaskCardProps {
 }
 
 function intentMapping(name: String){
-    type intent = "success" | "warning" | "error" | "info"
-    return name=="info" ? "info" : undefined
+    type intent = "success" | "warning" | "error" | "info" 
+    return name=="info" ? "info" 
+          : name=="warning"? "warning"
+          : name=="error"? "error"
+          : name=="danger"? "danger"
+          : undefined;
 }
+
 const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHighContrast }) => {
   const hasMessage = card.message != null && card.message.length > 0;
   return (
@@ -38,7 +44,10 @@ const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHig
       { card.tasks.length !== 0 ? 
         <>
           {card.tasks.map(task => (
-            <Alert intent={intentMapping(task.name)} as="div">{task.details}</Alert>
+            <Alert variant={intentMapping(task.name)}>
+              <Alert.Heading>{task.name}</Alert.Heading>
+              {task.details}
+            </Alert>
           ))}
         </> : null 
       }
