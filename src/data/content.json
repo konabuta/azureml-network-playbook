@@ -10,94 +10,40 @@
   "questions": [
     {
       "name": "workspaceNetwork",
-      "category": "Correct operation",
+      "category": "Workspace Network",
       "choices": [
         {
-          "name": "search",
-          "definition": "A search system locates items that correspond to user-specified keywords, phrases, or characters.",
+          "name": "public",
+          "definition": "Access to Azure ML Workspace over the public internet.",
           "examples": [
             {
-              "name": "",
-              "details": "<ul> <li>Search engines, such as Bing, generate matching results (e.g., a movie title) along with contextually relevant information (e.g., showtimes) based on the user's current location and time. </li> <li>An in-app search feature, such as Microsoft Search in Office products, allows users to quickly find application-specific information, from commands or help to recently used files and more.</li> </ul>"
+              "name": "xxx",
+              "details": "xxx"
             }
           ],
           "taskCard": {
             "tasks": [
               {
-                "name": "Normal operation",
-                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
+                "name": "Recommendation",
+                "details": "Using Private Link-enabled workspace is recommended for enterprise deployment."
               }
             ]
           }
         },
         {
-          "name": "recommendation",
-          "definition": "A recommendation system makes preferred-content suggestions, sometimes by predicting the user’s rating of the content.",
+          "name": "private",
+          "definition": "Access to Azure ML Workspace from VNET.",
           "examples": [
             {
-              "name": "",
-              "details": "<ul> <li>Playlist generators for video and music services like Netflix, YouTube, and Spotify.</li> <li>Product recommender services, such as Amazon.</li> <li>Contextual assistant services such as, <a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Meeting Insights by Microsoft Outlook is an intelligent assistant that suggests meeting related information, including content presented during the meeting, sent meeting notes, and other relevant post-meeting material.\">Meeting Insights</a></li> </ul>"
+              "name": "xxx",
+              "details": "xxx"
             }
           ],
           "taskCard": {
             "tasks": [
               {
-                "name": "Normal operation",
-                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
-              }
-            ]
-          }
-        },
-        {
-          "name": "conversational_ai",
-          "definition": "Conversational agents interact with people through one or more exchanges of natural-language dialogue, similar to conversing with a person.",
-          "examples": [
-            {
-              "name": "",
-              "details": "<ul> <li>Voice assistants for productivity management or home automation, like Cortana, Siri, and Alexa. </li> <li>Chatbots for customer support on e-commerce websites.</li> </ul>"
-            }
-          ],
-          "taskCard": {
-            "tasks": [
-              {
-                "name": "Normal operation",
-                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
-              }
-            ]
-          }
-        },
-        {
-          "name": "text_prediction_and_assistance",
-          "definition": "Text prediction and writing assistants help with the writing process, including research, grammar, tone, and localization.",
-          "examples": [
-            {
-              "name": "",
-              "details": "<ul> <li>Predicting the next set of words based on the user's input.</li> <li>Providing corrections for spelling, grammar, and punctuation mistakes.</li> <li>Making suggestions for similar words, paraphrases, and alternative expressions.</li> </ul>"
-            }
-          ],
-          "taskCard": {
-            "tasks": [
-              {
-                "name": "Normal operation",
-                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.</p>"
-              }
-            ]
-          }
-        },
-        {
-          "name": "classification",
-          "definition": "Text or document classification categorizes text in groups organized by predefined labels.",
-          "examples": [
-            {
-              "name": "",
-              "details": "<ul> <li>Spam filters in email applications, such as Microsoft Outlook.</li> </ul>"
-            }
-          ],
-          "taskCard": {
-            "tasks": [
-              {
-                "name": "Normal operation",
-                "details": "<p>As usual, include scenarios where the system demonstrates normal operation.<p>"
+                "name": "Alert",
+                "details": "xxx"
               }
             ]
           }
@@ -201,7 +147,7 @@
       ]
     },
     {
-      "name": "inputModalit",
+      "name": "publicVNET",
       "instructions": "Please make a selection to see more information about your <a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Although your system may have multiple input modalities, you should select the input that will be processed by the AI system.\">primary</a> input modality.",
       "category": "Input errors",
       "choices": [
@@ -301,7 +247,7 @@
       ]
     },
     {
-      "name": "trigger",
+      "name": "privateACR",
       "instructions": "Select a response to see more information.",
       "category": "Trigger errors",
       "choices": [
@@ -311,12 +257,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'text'",
+              "visibleIf": "{publicVNET} = 'text'",
               "details": "<p>A system that processes text input only after a person clicks a button (e.g., \"Submit\", \"Send\", etc.), or keystroke (e.g., \"Enter\", \"Return\").</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'speech'",
+              "visibleIf": "{publicVNET} = 'speech'",
               "details": "<p>A virtual assistant that is activated by pressing a button rather than by speaking a wake-word (e.g., \"Hey Cortana,\", \"Alexa\", \"etc. \").</p>"
             }
           ],
@@ -331,12 +277,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'text'",
+              "visibleIf": "{publicVNET} = 'text'",
               "details": "<p>A scheduling assistant that must decide if an email mentions setting up a meeting.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'speech'",
+              "visibleIf": "{publicVNET} = 'speech'",
               "details": "<p>A virtual assistant that must decide if a sound captured by the microphone contains a \"wake word\".</p>"
             }
           ],
@@ -371,12 +317,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'text'",
+              "visibleIf": "{publicVNET} = 'text'",
               "details": "<p>The user’s input is wholly contained in a text or form field.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'speech'",
+              "visibleIf": "{publicVNET} = 'speech'",
               "details": "<p>The system is expected to process all speech contained in an audio recording (e.g., a transcription or captioning service).</p>"
             }
           ],
@@ -391,12 +337,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'text'",
+              "visibleIf": "{publicVNET} = 'text'",
               "details": "<p>Systems that process text one sentence at a time must first differentiate between internal punctuation (e.g., \"Mr.\", \"Yahoo!\") and punctuation that terminates the sentence.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModalit} = 'speech'",
+              "visibleIf": "{publicVNET} = 'speech'",
               "details": "<p>A voice-based virtual assistant that needs to decide when the user has stopped speaking before processing their request. For example, if a person speaks: \"<i>How is the weather <u>[pause]</u> in Redmond, Washington?</i>\", there is a risk that the agent will not process the words following the pause, and will return the weather for the wrong location."
             }
           ],

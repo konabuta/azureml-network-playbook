@@ -24,39 +24,33 @@
         },
         {
           "type": "radiogroup",
-          "name": "inputModalit",
-          "title": "Use VNET for Compute?",
+          "name": "publicVNET",
+          "title": "Use VNET for Compute resources and Storage?",
           "visibleIf": "{workspaceNetwork} ='public'",
           "choices": [
             {
-              "value": "text",
-              "visibleIf": "{workspaceNetwork} notempty",
-              "text": "Text"
+              "value": "use_vnet_for_compute_and_storage",
+              "text": "Use VNET for Compute resources and Storage?"
             },
             {
-              "value": "speech",
-              "text": "Speech"
-            },
-            {
-              "value": "action_sequence",
-              "visibleIf": "{workspaceNetwork} = 'recommendation' or {workspaceNetwork} = 'classification' or {workspaceNetwork} = 'other'",
-              "text": "Action sequence"
+              "value": "only_public_resources",
+              "text": "Only public resources"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "trigger",
-          "title": "Will your {workspaceNetwork} system have a clear way of knowing when it should trigger?",
-          "visibleIf": "{inputModalit} notempty",
+          "name": "privateACR",
+          "title": "Use private ACR?",
+          "visibleIf": "{publicVNET} = 'use_vnet_for_compute_and_storage'",
           "choices": [
             {
-              "value": "yes",
-              "text": "Yes"
+              "value": "use_public_acr",
+              "text": "Use public ACR"
             },
             {
-              "value": "no",
-              "text": "No"
+              "value": "use_private_acr",
+              "text": "Use private ACR"
             }
           ]
         },
@@ -64,7 +58,7 @@
           "type": "radiogroup",
           "name": "delimiter",
           "title": "When activated, will your {workspaceNetwork} system have a clear way of delimiting the user's input?",
-          "visibleIf": "{trigger} notempty",
+          "visibleIf": "{privateACR} notempty",
           "choices": [
             {
               "value": "yes",
