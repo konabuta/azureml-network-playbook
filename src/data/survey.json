@@ -10,35 +10,23 @@
         {
           "type": "radiogroup",
           "name": "systemDomain",
-          "title": "Which of these systems is closest to what you are designing?",
+          "title": "Is your Azure Machine Learning Public workspace or Private Link-enabled workspace?",
           "choices": [
             {
-              "value": "search",
-              "text": "Search"
+              "value": "public",
+              "text": "Public workspace"
             },
             {
-              "value": "recommendation",
-              "text": "Recommendation"
-            },
-            {
-              "value": "conversational_ai",
-              "text": "Conversational AI"
-            },
-            {
-              "value": "text_prediction_and_assistance",
-              "text": "Text prediction and assistance"
-            },
-            {
-              "value": "classification",
-              "text": "Classification"
+              "value": "private",
+              "text": "Private Link-enabled workspace"
             }
           ]
         },
         {
           "type": "radiogroup",
           "name": "inputModality",
-          "title": "What is the primary input modality for your {systemDomain} system?",
-          "visibleIf": "{systemDomain} notempty",
+          "title": "Use VNET for Compute?",
+          "visibleIf": "{systemDomain} ='public'",
           "choices": [
             {
               "value": "text",
@@ -47,7 +35,6 @@
             },
             {
               "value": "speech",
-              "visibleIf": "{systemDomain} = 'search' or {systemDomain} = 'recommendation' or {systemDomain} = 'conversational_ai' or {systemDomain} = 'other'",
               "text": "Speech"
             },
             {
