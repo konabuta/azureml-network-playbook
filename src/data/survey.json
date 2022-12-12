@@ -9,7 +9,7 @@
       "elements": [
         {
           "type": "radiogroup",
-          "name": "systemDomain",
+          "name": "workspaceNetwork",
           "title": "Is your Azure Machine Learning Public workspace or Private Link-enabled workspace?",
           "choices": [
             {
@@ -24,13 +24,13 @@
         },
         {
           "type": "radiogroup",
-          "name": "inputModality",
+          "name": "inputModalit",
           "title": "Use VNET for Compute?",
-          "visibleIf": "{systemDomain} ='public'",
+          "visibleIf": "{workspaceNetwork} ='public'",
           "choices": [
             {
               "value": "text",
-              "visibleIf": "{systemDomain} notempty",
+              "visibleIf": "{workspaceNetwork} notempty",
               "text": "Text"
             },
             {
@@ -39,7 +39,7 @@
             },
             {
               "value": "action_sequence",
-              "visibleIf": "{systemDomain} = 'recommendation' or {systemDomain} = 'classification' or {systemDomain} = 'other'",
+              "visibleIf": "{workspaceNetwork} = 'recommendation' or {workspaceNetwork} = 'classification' or {workspaceNetwork} = 'other'",
               "text": "Action sequence"
             }
           ]
@@ -47,8 +47,8 @@
         {
           "type": "radiogroup",
           "name": "trigger",
-          "title": "Will your {systemDomain} system have a clear way of knowing when it should trigger?",
-          "visibleIf": "{inputModality} notempty",
+          "title": "Will your {workspaceNetwork} system have a clear way of knowing when it should trigger?",
+          "visibleIf": "{inputModalit} notempty",
           "choices": [
             {
               "value": "yes",
@@ -63,7 +63,7 @@
         {
           "type": "radiogroup",
           "name": "delimiter",
-          "title": "When activated, will your {systemDomain} system have a clear way of delimiting the user's input?",
+          "title": "When activated, will your {workspaceNetwork} system have a clear way of delimiting the user's input?",
           "visibleIf": "{trigger} notempty",
           "choices": [
             {
@@ -96,21 +96,21 @@
           "type": "radiogroup",
           "name": "responseType",
           "title": "What form does the output take?",
-          "visibleIf": "{interpretation} notempty and ({systemDomain}='search' or {systemDomain}='recommendation' or {systemDomain}='conversational_ai' or {systemDomain}='text_prediction_and_assistance' or {systemDomain}='other')",
+          "visibleIf": "{interpretation} notempty and ({workspaceNetwork}='search' or {workspaceNetwork}='recommendation' or {workspaceNetwork}='conversational_ai' or {workspaceNetwork}='text_prediction_and_assistance' or {workspaceNetwork}='other')",
           "choices": [
             {
               "value": "single_response",
-              "visibleIf": "{systemDomain} = 'search' or {systemDomain}='recommendation' or {systemDomain}='conversational_ai' or {systemDomain}='text_prediction_and_assistance' or {systemDomain}='other'",
+              "visibleIf": "{workspaceNetwork} = 'search' or {workspaceNetwork}='recommendation' or {workspaceNetwork}='conversational_ai' or {workspaceNetwork}='text_prediction_and_assistance' or {workspaceNetwork}='other'",
               "text": "Single response"
             },
             {
               "value": "ranked_list",
-              "visibleIf": "{systemDomain}='search' or {systemDomain}='recommendation' or {systemDomain}='conversational_ai' or {systemDomain}='text_prediction_and_assistance' or {systemDomain}='other'",
+              "visibleIf": "{workspaceNetwork}='search' or {workspaceNetwork}='recommendation' or {workspaceNetwork}='conversational_ai' or {workspaceNetwork}='text_prediction_and_assistance' or {workspaceNetwork}='other'",
               "text": "Ranked list"
             },
             {
               "value": "action_execution",
-              "visibleIf": "{systemDomain}='conversational_ai' or {systemDomain}='other'",
+              "visibleIf": "{workspaceNetwork}='conversational_ai' or {workspaceNetwork}='other'",
               "text": "Action execution"
             }
           ]
@@ -123,7 +123,7 @@
           "choices": [
             {
               "value": "generated",
-              "visibleIf": "{systemDomain} <> 'search' and {systemDomain} <> 'recommendation'",
+              "visibleIf": "{workspaceNetwork} <> 'search' and {workspaceNetwork} <> 'recommendation'",
               "text": "Generated"
             },
             {
@@ -136,7 +136,7 @@
           "type": "radiogroup",
           "name": "responseClassification",
           "title": "How many classifications are there?",
-          "visibleIf": "{interpretation} notempty and {systemDomain} = 'classification'",
+          "visibleIf": "{interpretation} notempty and {workspaceNetwork} = 'classification'",
           "choices": [
             {
               "value": "binary",

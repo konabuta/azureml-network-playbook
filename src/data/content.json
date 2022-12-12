@@ -105,7 +105,7 @@
       ]
     },
     {
-      "name": "systemDomain",
+      "name": "workspaceNetwork",
       "category": "Correct operation",
       "choices": [
         {
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "name": "inputModality",
+      "name": "inputModalit",
       "instructions": "Please make a selection to see more information about your <a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Although your system may have multiple input modalities, you should select the input that will be processed by the AI system.\">primary</a> input modality.",
       "category": "Input errors",
       "choices": [
@@ -211,27 +211,27 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'search'",
+              "visibleIf": "{workspaceNetwork} = 'search'",
               "details": "<p>A search engine that accepts written queries and then retrieves relevant documents.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'recommendation'",
+              "visibleIf": "{workspaceNetwork} = 'recommendation'",
               "details": "<p>A news recommendation service that recommends news stories based on the topics and news narratives a person is known to have followed in the past.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'conversational_ai'",
+              "visibleIf": "{workspaceNetwork} = 'conversational_ai'",
               "details": "<p>A chatbot that communicates with people over a text channel such as instant messaging or email.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'text_prediction_and_assistance'",
+              "visibleIf": "{workspaceNetwork} = 'text_prediction_and_assistance'",
               "details": "<p>A text auto-complete feature that uses keystrokes predict the rest of a person's input. Specific examples include:</p? <ul><li>Search auto-complete in Bing.com</li><li>Predictive text in Outlook email</li><li>Smart Compose in GMail</li></ul>"
             },
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'classification'",
+              "visibleIf": "{workspaceNetwork} = 'classification'",
               "details": "<p>A system that organizes emails, or other communications, into categories like: spam, promotions/marketing, social media, etc.</p>"
             }
           ],
@@ -251,17 +251,17 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'search'",
+              "visibleIf": "{workspaceNetwork} = 'search'",
               "details": "<p>Search systems that are integrated into voice assistants enable users to retrieve information by entering speech queries.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'recommendation'",
+              "visibleIf": "{workspaceNetwork} = 'recommendation'",
               "details": "<p>Recommender systems that are integrated into voice assistants enable users to explore relevant information by entering speech queries.</p> <ul> <li>Home-based voice assistants, such as Amazon Echo, provide recommendations for music, recipes, or audio books.</li> </ul>"
             },
             {
               "name": "",
-              "visibleIf": "{systemDomain} = 'conversational_ai'",
+              "visibleIf": "{workspaceNetwork} = 'conversational_ai'",
               "details": "<p>A voice assistant is a user interface that allows a user to complete an action or retrieve information simply by speaking a command.</p>"
             }
           ],
@@ -311,12 +311,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'text'",
+              "visibleIf": "{inputModalit} = 'text'",
               "details": "<p>A system that processes text input only after a person clicks a button (e.g., \"Submit\", \"Send\", etc.), or keystroke (e.g., \"Enter\", \"Return\").</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'speech'",
+              "visibleIf": "{inputModalit} = 'speech'",
               "details": "<p>A virtual assistant that is activated by pressing a button rather than by speaking a wake-word (e.g., \"Hey Cortana,\", \"Alexa\", \"etc. \").</p>"
             }
           ],
@@ -331,12 +331,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'text'",
+              "visibleIf": "{inputModalit} = 'text'",
               "details": "<p>A scheduling assistant that must decide if an email mentions setting up a meeting.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'speech'",
+              "visibleIf": "{inputModalit} = 'speech'",
               "details": "<p>A virtual assistant that must decide if a sound captured by the microphone contains a \"wake word\".</p>"
             }
           ],
@@ -371,12 +371,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'text'",
+              "visibleIf": "{inputModalit} = 'text'",
               "details": "<p>The user’s input is wholly contained in a text or form field.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'speech'",
+              "visibleIf": "{inputModalit} = 'speech'",
               "details": "<p>The system is expected to process all speech contained in an audio recording (e.g., a transcription or captioning service).</p>"
             }
           ],
@@ -391,12 +391,12 @@
           "examples": [
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'text'",
+              "visibleIf": "{inputModalit} = 'text'",
               "details": "<p>Systems that process text one sentence at a time must first differentiate between internal punctuation (e.g., \"Mr.\", \"Yahoo!\") and punctuation that terminates the sentence.</p>"
             },
             {
               "name": "",
-              "visibleIf": "{inputModality} = 'speech'",
+              "visibleIf": "{inputModalit} = 'speech'",
               "details": "<p>A voice-based virtual assistant that needs to decide when the user has stopped speaking before processing their request. For example, if a person speaks: \"<i>How is the weather <u>[pause]</u> in Redmond, Washington?</i>\", there is a risk that the agent will not process the words following the pause, and will return the weather for the wrong location."
             }
           ],
