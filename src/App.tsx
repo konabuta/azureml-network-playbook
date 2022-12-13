@@ -454,7 +454,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
           :
           <>
             <div id="title-bar" className="title-bar" style={{borderBottom: highContrastBorder}}>
-              <header role="banner" className="title-bar-text">AzureML Guidebook</header>
+              <header role="banner" className="title-bar-text">Azure ML Guidebook</header>
               <div style={{ marginLeft: "auto" }} className="d-flex justify-content-end">
                 <button aria-label="Export" onClick={() => { setShowExportForm(true) }} className="blue-button">Export</button>
                 <ExportDialog 
@@ -500,7 +500,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
     return (
       <>
         <div id="title-bar" className="title-bar py-2" style={{borderBottom: highContrastBorder}}>
-          <header role="banner" className="title-bar-text ml-3">AzureML Guidebook</header>
+          <header role="banner" className="title-bar-text ml-3">Azure ML Guidebook</header>
           <div style={{ marginLeft: "auto" }} className="d-flex justify-content-end">
             <button aria-label="Export" onClick={() => setShowExportForm(true)} className="blue-button mr-3">Export</button>
           </div>
