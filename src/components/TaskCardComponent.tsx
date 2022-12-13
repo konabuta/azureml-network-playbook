@@ -12,21 +12,10 @@
 import React from 'react'
 import { TaskCard } from '../models/Types';
 import TaskComponent from './TaskComponent';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-// import { Alert } from "@fluentui/react-components/unstable";
-// import Alert from 'react-bootstrap/Alert';
-
-type AlertColor = 'success' | 'info' | 'warning' | 'error';
 
 interface TaskCardProps {
   card: TaskCard,
   isHighContrast: boolean
-}
-
-function severityMapping(severity: string): AlertColor{
-  console.log("severity:", severity)
-  return severity as AlertColor
 }
 
 const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHighContrast }) => {
@@ -38,16 +27,6 @@ const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHig
         <>
           {card.tasks.map(task => (
             <TaskComponent task={task} isHighContrast={isHighContrast}/>
-          ))}
-        </> : null 
-      }
-      { card.tasks.length !== 0 ? 
-        <>
-          {card.tasks.map(task => (
-            <Alert severity={severityMapping(task.name)}>
-                <AlertTitle>{task.name}</AlertTitle>
-              {task.details}
-            </Alert>
           ))}
         </> : null 
       }
