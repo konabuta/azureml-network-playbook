@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react'
 import { Task } from '../models/Types'
-import { BsFillCaretRightFill, BsFillCaretDownFill } from 'react-icons/bs';
+// import { BsFillCaretRightFill, BsFillCaretDownFill } from 'react-icons/bs';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
@@ -20,8 +20,8 @@ function severityMapping(severity: string): AlertColor{
 }
 
 const TaskComponent: React.FunctionComponent<TaskProps> = ({ task, isHighContrast }) => {
-  const [isExpanded, setExpanded] = useState(true);
-  const highContrastColor = isHighContrast ? "#FFFFFF" : "#000000";
+  // const [isExpanded, setExpanded] = useState(true);
+  // const highContrastColor = isHighContrast ? "#FFFFFF" : "#000000";
   return (
     <div key={task.id} className="task-card">
       {/*{} <button aria-label={`Show or hide ${task.name} task details`} className="task-header-button" onClick={() => setExpanded(!isExpanded)}>
