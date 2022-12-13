@@ -10,7 +10,6 @@
 // <task_n>
 
 import React from 'react'
-import PropTypes from 'prop-types';
 import { TaskCard } from '../models/Types';
 import TaskComponent from './TaskComponent';
 import Alert from '@mui/material/Alert';
