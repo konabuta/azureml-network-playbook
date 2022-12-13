@@ -19,7 +19,7 @@ import LinkDialog from './components/LinkDialog';
 import { BsArrowCounterclockwise, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { saveAs } from 'file-saver';
 import { getCategorySectionId, isNullOrEmpty } from './util/Utils';
-
+import githublogo from "./assets/github-logo.svg";
 
 interface AppProps {
   surveyData: any,
@@ -464,9 +464,13 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
                   onGithubExport={() => setShowGithubForm(true)}
                   onPdfExport={() => window.print()}
                   onLinkExport={() => setShowLinkDialog(true)}/>
+                <a href={process.env.REACT_APP_REPO_URL} target="_blank">
+                  <img src={githublogo} className="github-logo" alt="github logo" />
+                </a>
                 <LinkDialog 
                   show={showLinkDialog}
                   onClose={() => setShowLinkDialog(false)} />
+                
                 <GithubExportForm taskMap={taskMap} numTasks={numTasks} showForm={showGithubForm} onClose={() => setShowGithubForm(false)} />
               </div>
             </div>
@@ -511,6 +515,9 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
             onGithubExport={() => setShowGithubForm(true)}
             onPdfExport={() => window.print()}
             onLinkExport={() => setShowLinkDialog(true)}/>
+          <a href={process.env.REACT_APP_REPO_URL} target="_blank">
+            <img src={githublogo} className="github-logo" alt="github logo" />
+          </a>
           <LinkDialog 
             show={showLinkDialog}
             onClose={() => setShowLinkDialog(false)} />
@@ -552,7 +559,9 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
         <footer role="contentinfo" id="footer" className="footer">
           <span className="mx-3">Copyright &copy; Microsoft Corporation</span>
           <address style={{ marginLeft: "auto", marginRight: "1em", marginBottom: "0px", display: "inline-block", fontStyle: "normal" }}>
-            <a href="mailto:aiguidelines@microsoft.com">Contact us</a>
+            <a href="https://github.com/konabuta/azureml-network-playbook">GitHub</a>
+            &nbsp;&nbsp;
+            <a href="https://github.com/konabuta/azureml-network-playbook/issues">Contact us</a>
           </address>
         </footer>
       </>
