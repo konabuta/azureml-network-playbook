@@ -25,6 +25,7 @@ interface TaskCardProps {
 }
 
 function severityMapping(severity: string): AlertColor{
+  console.log("severity:", severity)
   return severity as AlertColor
 }
 

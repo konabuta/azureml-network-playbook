@@ -42,7 +42,7 @@
           "taskCard": {
             "tasks": [
               {
-                "name": "danger",
+                "name": "warning",
                 "details": "xxx"
               }
             ]
@@ -263,7 +263,7 @@
           "taskCard": {
             "tasks": [
               {
-                "name": "Task",
+                "name": "info",
                 "details": "Congirue Private Link-enabled Azure Container Registry."
               },
               {
