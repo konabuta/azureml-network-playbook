@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/azureml-network-playbook/static/css/main.a5807495.css",
-    "main.js": "/azureml-network-playbook/static/js/main.2f1d852a.js",
-    "static/js/496.0eb64990.chunk.js": "/azureml-network-playbook/static/js/496.0eb64990.chunk.js",
+    "main.css": "/azureml-network-playbook/static/css/main.d4e99bb7.css",
+    "main.js": "/azureml-network-playbook/static/js/main.975431b7.js",
+    "static/js/496.ea5c5722.chunk.js": "/azureml-network-playbook/static/js/496.ea5c5722.chunk.js",
     "index.html": "/azureml-network-playbook/index.html",
-    "main.a5807495.css.map": "/azureml-network-playbook/static/css/main.a5807495.css.map",
-    "main.2f1d852a.js.map": "/azureml-network-playbook/static/js/main.2f1d852a.js.map",
-    "496.0eb64990.chunk.js.map": "/azureml-network-playbook/static/js/496.0eb64990.chunk.js.map"
+    "main.d4e99bb7.css.map": "/azureml-network-playbook/static/css/main.d4e99bb7.css.map",
+    "main.975431b7.js.map": "/azureml-network-playbook/static/js/main.975431b7.js.map",
+    "496.ea5c5722.chunk.js.map": "/azureml-network-playbook/static/js/496.ea5c5722.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5807495.css",
-    "static/js/main.2f1d852a.js"
+    "static/css/main.d4e99bb7.css",
+    "static/js/main.975431b7.js"
   ]
 }
