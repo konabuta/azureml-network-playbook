@@ -20,6 +20,7 @@ import { BsArrowCounterclockwise, BsChevronLeft, BsChevronRight } from 'react-ic
 import { saveAs } from 'file-saver';
 import { getCategorySectionId, isNullOrEmpty } from './util/Utils';
 
+
 interface AppProps {
   surveyData: any,
   contentData: any
@@ -428,7 +429,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
         { showSurvey ?
           <div className="mobile-grid">
             <div id="title-bar" className="title-bar" style={{borderBottom: highContrastBorder}}>
-              <header role="banner" className="title-bar-text">Network Playbook for Azure Machine Learning</header>
+              <header role="banner" className="title-bar-text">Azure ML Guidebook</header>
               <div id="survey-buttons" style={{ marginLeft: "auto" }} className="d-flex justify-content-end">
                 <button aria-label="Restart" onClick={handleClear} className="blue-button">Restart</button>
                 <button aria-label="Undo" onClick={handleUndo} disabled={undoStack.length === 0} className="blue-button ml-3"><BsArrowCounterclockwise /> Undo</button>
@@ -453,7 +454,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
           :
           <>
             <div id="title-bar" className="title-bar" style={{borderBottom: highContrastBorder}}>
-              <header role="banner" className="title-bar-text">HAX Playbook</header>
+              <header role="banner" className="title-bar-text">AzureML Guidebook</header>
               <div style={{ marginLeft: "auto" }} className="d-flex justify-content-end">
                 <button aria-label="Export" onClick={() => { setShowExportForm(true) }} className="blue-button">Export</button>
                 <ExportDialog 
@@ -499,7 +500,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
     return (
       <>
         <div id="title-bar" className="title-bar py-2" style={{borderBottom: highContrastBorder}}>
-          <header role="banner" className="title-bar-text ml-3">Network Playbook for Azure Machine Learning</header>
+          <header role="banner" className="title-bar-text ml-3">AzureML Guidebook</header>
           <div style={{ marginLeft: "auto" }} className="d-flex justify-content-end">
             <button aria-label="Export" onClick={() => setShowExportForm(true)} className="blue-button mr-3">Export</button>
           </div>
