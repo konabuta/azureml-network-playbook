@@ -464,7 +464,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
                   onGithubExport={() => setShowGithubForm(true)}
                   onPdfExport={() => window.print()}
                   onLinkExport={() => setShowLinkDialog(true)}/>
-                <a href={process.env.REACT_APP_REPO_URL} target="_blank">
+                <a href={process.env.REACT_APP_REPO_URL} target="_blank" rel="noopener noreferrer">
                   <img src={githublogo} className="github-logo" alt="github logo" />
                 </a>
                 <LinkDialog 
@@ -515,7 +515,7 @@ const App: React.FunctionComponent<AppProps> = ({ surveyData, contentData }) => 
             onGithubExport={() => setShowGithubForm(true)}
             onPdfExport={() => window.print()}
             onLinkExport={() => setShowLinkDialog(true)}/>
-          <a href={process.env.REACT_APP_REPO_URL} target="_blank">
+          <a href={process.env.REACT_APP_REPO_URL} target="_blank" rel="noopener noreferrer">
             <img src={githublogo} className="github-logo" alt="github logo" />
           </a>
           <LinkDialog 
