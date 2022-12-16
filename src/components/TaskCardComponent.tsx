@@ -28,9 +28,11 @@ const TaskCardComponent: React.FunctionComponent<TaskCardProps> = ({ card, isHig
           {card.tasks.map(task => (
             <TaskComponent task={task} isHighContrast={isHighContrast}/>
           ))}
-        </> : null }
+        </> : null 
+      }
     </div>
   )
 }
+
 
 export default TaskCardComponent;

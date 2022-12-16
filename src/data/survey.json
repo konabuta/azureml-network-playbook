@@ -9,75 +9,56 @@
       "elements": [
         {
           "type": "radiogroup",
-          "name": "systemDomain",
-          "title": "Which of these systems is closest to what you are designing?",
+          "name": "workspaceNetwork",
+          "title": "Is your Azure Machine Learning Public workspace or Private Link-enabled workspace?",
           "choices": [
             {
-              "value": "search",
-              "text": "Search"
+              "value": "public",
+              "text": "Public workspace"
             },
             {
-              "value": "recommendation",
-              "text": "Recommendation"
-            },
-            {
-              "value": "conversational_ai",
-              "text": "Conversational AI"
-            },
-            {
-              "value": "text_prediction_and_assistance",
-              "text": "Text prediction and assistance"
-            },
-            {
-              "value": "classification",
-              "text": "Classification"
+              "value": "private",
+              "text": "Private Link-enabled workspace"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "inputModality",
-          "title": "What is the primary input modality for your {systemDomain} system?",
-          "visibleIf": "{systemDomain} notempty",
+          "name": "publicVNET",
+          "title": "Use VNET for Compute resources and Storage?",
+          "visibleIf": "{workspaceNetwork} ='public'",
           "choices": [
             {
-              "value": "text",
-              "visibleIf": "{systemDomain} notempty",
-              "text": "Text"
+              "value": "use_vnet_for_compute_and_storage",
+              "text": "Use VNET for Compute resources and Storage?"
             },
             {
-              "value": "speech",
-              "visibleIf": "{systemDomain} = 'search' or {systemDomain} = 'recommendation' or {systemDomain} = 'conversational_ai' or {systemDomain} = 'other'",
-              "text": "Speech"
-            },
-            {
-              "value": "action_sequence",
-              "visibleIf": "{systemDomain} = 'recommendation' or {systemDomain} = 'classification' or {systemDomain} = 'other'",
-              "text": "Action sequence"
+              "value": "only_public_resources",
+              "text": "Only public resources"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "trigger",
-          "title": "Will your {systemDomain} system have a clear way of knowing when it should trigger?",
-          "visibleIf": "{inputModality} notempty",
+          "name": "privateACR",
+          "title": "Use private ACR?",
+          "visibleIf": "{publicVNET} = 'use_vnet_for_compute_and_storage'",
           "choices": [
             {
-              "value": "yes",
-              "text": "Yes"
+              "value": "use_public_acr",
+              "text": "Use public ACR"
             },
             {
-              "value": "no",
-              "text": "No"
+              "value": "use_private_acr",
+              "text": "Use private ACR"
             }
           ]
         },
         {
           "type": "radiogroup",
           "name": "delimiter",
-          "title": "When activated, will your {systemDomain} system have a clear way of delimiting the user's input?",
-          "visibleIf": "{trigger} notempty",
+          "title": "When activated, will your {workspaceNetwork} system have a clear way of delimiting the user's input?",
+          "visibleIf": "{privateACR} ='xxx'",
           "choices": [
             {
               "value": "yes",
@@ -109,21 +90,21 @@
           "type": "radiogroup",
           "name": "responseType",
           "title": "What form does the output take?",
-          "visibleIf": "{interpretation} notempty and ({systemDomain}='search' or {systemDomain}='recommendation' or {systemDomain}='conversational_ai' or {systemDomain}='text_prediction_and_assistance' or {systemDomain}='other')",
+          "visibleIf": "{interpretation} notempty and ({workspaceNetwork}='search' or {workspaceNetwork}='recommendation' or {workspaceNetwork}='conversational_ai' or {workspaceNetwork}='text_prediction_and_assistance' or {workspaceNetwork}='other')",
           "choices": [
             {
               "value": "single_response",
-              "visibleIf": "{systemDomain} = 'search' or {systemDomain}='recommendation' or {systemDomain}='conversational_ai' or {systemDomain}='text_prediction_and_assistance' or {systemDomain}='other'",
+              "visibleIf": "{workspaceNetwork} = 'search' or {workspaceNetwork}='recommendation' or {workspaceNetwork}='conversational_ai' or {workspaceNetwork}='text_prediction_and_assistance' or {workspaceNetwork}='other'",
               "text": "Single response"
             },
             {
               "value": "ranked_list",
-              "visibleIf": "{systemDomain}='search' or {systemDomain}='recommendation' or {systemDomain}='conversational_ai' or {systemDomain}='text_prediction_and_assistance' or {systemDomain}='other'",
+              "visibleIf": "{workspaceNetwork}='search' or {workspaceNetwork}='recommendation' or {workspaceNetwork}='conversational_ai' or {workspaceNetwork}='text_prediction_and_assistance' or {workspaceNetwork}='other'",
               "text": "Ranked list"
             },
             {
               "value": "action_execution",
-              "visibleIf": "{systemDomain}='conversational_ai' or {systemDomain}='other'",
+              "visibleIf": "{workspaceNetwork}='conversational_ai' or {workspaceNetwork}='other'",
               "text": "Action execution"
             }
           ]
@@ -136,7 +117,7 @@
           "choices": [
             {
               "value": "generated",
-              "visibleIf": "{systemDomain} <> 'search' and {systemDomain} <> 'recommendation'",
+              "visibleIf": "{workspaceNetwork} <> 'search' and {workspaceNetwork} <> 'recommendation'",
               "text": "Generated"
             },
             {
@@ -149,7 +130,7 @@
           "type": "radiogroup",
           "name": "responseClassification",
           "title": "How many classifications are there?",
-          "visibleIf": "{interpretation} notempty and {systemDomain} = 'classification'",
+          "visibleIf": "{interpretation} notempty and {workspaceNetwork} = 'classification'",
           "choices": [
             {
               "value": "binary",

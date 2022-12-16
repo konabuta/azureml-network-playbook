@@ -14,7 +14,7 @@ import {
   IIconProps,
 } from '@fluentui/react';
 import { surveyModel } from '../App'
-import { ConditionRunner } from 'survey-react'
+import { ConditionRunner } from 'survey-core'
 
 interface HelpProps {
   name: string,
@@ -64,7 +64,7 @@ export const HelpDialog: React.FunctionComponent<HelpProps> = ({ name, examples,
       >
         <section>
           <header className={contentStyles.header}>
-            <h3 id={titleId}>{name} - Examples</h3>
+            <h4 id={titleId}>Help - {name}</h4>
             <IconButton
               styles={iconButtonStyles}
               iconProps={cancelIcon}

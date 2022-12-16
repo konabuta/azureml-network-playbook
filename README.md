@@ -1,4 +1,4 @@
-# Introduction
+# Azure Machine Learning 
 
 The HAX Playbook is an interactive tool for generating interaction scenarios to test when designing
 user-facing AI systems.
