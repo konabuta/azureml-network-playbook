@@ -18,6 +18,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - run: mv .env.sample .env
+      - run: echo REACT_APP_REPO_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY >> .env
+      - run: cat .env
       - name: Build App
         run: npm run build
       - name: App Deploy
