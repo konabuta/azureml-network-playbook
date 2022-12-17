@@ -240,8 +240,8 @@
       .sv_main .sv_container .sv_body .sv_p_root > .sv_row {
         padding: 0; }
       .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
-        font-weight: bold;
-        font-size: 1em;
+        font-weight: normal;
+        font-size: 1.1em;
         margin: 0.5em 0; }
       .sv_main .sv_container .sv_body .sv_p_root .sv_q_description {
         margin-top: -0.6em;
