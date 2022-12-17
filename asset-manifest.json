@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/azureml-network-playbook/static/css/main.b87264e0.css",
+    "main.css": "/azureml-network-playbook/static/css/main.ea9c00de.css",
     "main.js": "/azureml-network-playbook/static/js/main.df0544bf.js",
     "static/js/496.ea5c5722.chunk.js": "/azureml-network-playbook/static/js/496.ea5c5722.chunk.js",
     "static/media/github-logo.svg": "/azureml-network-playbook/static/media/github-logo.97ed8e7eef60d61ca469881dd6f34511.svg",
     "index.html": "/azureml-network-playbook/index.html",
-    "main.b87264e0.css.map": "/azureml-network-playbook/static/css/main.b87264e0.css.map",
+    "main.ea9c00de.css.map": "/azureml-network-playbook/static/css/main.ea9c00de.css.map",
     "main.df0544bf.js.map": "/azureml-network-playbook/static/js/main.df0544bf.js.map",
     "496.ea5c5722.chunk.js.map": "/azureml-network-playbook/static/js/496.ea5c5722.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b87264e0.css",
+    "static/css/main.ea9c00de.css",
     "static/js/main.df0544bf.js"
   ]
 }
